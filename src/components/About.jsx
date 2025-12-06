@@ -9,31 +9,38 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              As an Associate Software Engineer – AI, I've built production-grade backend APIs, implemented JWT authentication, 
-              and designed modular database/service layers using SQLAlchemy. I've introduced middleware for logging, error handling, 
-              and request tracing to enhance system reliability and observability.
+              I'm a Computer Science graduate from the University of Sheffield with a passion for building innovative software solutions 
+              that solve real-world problems. My journey in tech spans from academic research to production-grade systems, combining 
+              theoretical knowledge with practical engineering skills.
             </p>
             <p>
-              During my Mobile Software Engineering Internship, I delivered a full MVP that improved client workflows by 40% and 
-              contributed to SCRUM practices. Academically, I excelled in my dissertation, creating a deep-learning pipeline for 
-              respiratory sound classification that achieved performance comparable to state-of-the-art models.
+              Currently working as an Associate Software Engineer – AI, I specialize in building robust backend APIs and implementing 
+              scalable architectures. I've designed modular systems using SQLAlchemy, implemented JWT authentication, and developed 
+              comprehensive middleware for logging, error handling, and request tracing. My work focuses on creating reliable, 
+              maintainable code that powers real-world applications.
             </p>
             <p>
-              Beyond technical work, I've demonstrated leadership as a computer science mentor, content creator, and society secretary, 
-              supporting students and managing events. I'm currently completing an AI Bootcamp focused on ML fundamentals and production deployment.
+              My academic achievements include a distinction in my dissertation, where I developed a deep-learning pipeline for 
+              respiratory sound classification that matched state-of-the-art performance. This project showcased my ability to bridge 
+              research and practical application, combining PyTorch, advanced ML techniques, and rigorous evaluation methodologies.
+            </p>
+            <p>
+              Beyond coding, I've led as a computer science mentor, helping students navigate their tech journeys, and served as a 
+              society secretary, organizing events and building community. I'm continuously learning, currently completing an AI Bootcamp 
+              focused on ML fundamentals and production deployment, always staying at the forefront of technology.
             </p>
             <div className="about-stats">
               <div className="stat-item">
+                <h3>BSc (Hons)</h3>
+                <p>University of Sheffield</p>
+              </div>
+              <div className="stat-item">
                 <h3>2:1</h3>
-                <p>Degree Classification</p>
+                <p>Overall Grade</p>
               </div>
               <div className="stat-item">
-                <h3>40%</h3>
-                <p>Workflow Improvement</p>
-              </div>
-              <div className="stat-item">
-                <h3>100%</h3>
-                <p>Production Ready</p>
+                <h3>Distinction</h3>
+                <p>Dissertation Grade</p>
               </div>
             </div>
           </div>

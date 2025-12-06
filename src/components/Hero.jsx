@@ -13,8 +13,8 @@ const Hero = () => {
           </h1>
           <h2 className="hero-subtitle">Graduate Software Engineer & AI/ML Specialist</h2>
           <p className="hero-description">
-            I create beautiful and functional web experiences with modern technologies.
-            Passionate about clean code, user experience, and continuous learning.
+            Creating production-grade systems and solving real-world problems through technology and innovation is my passion. I bring ideas to life with the help of clean, efficient code.
+            
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">View My Work</a>

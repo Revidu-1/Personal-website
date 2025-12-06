@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   padding: 120px 20px 80px;
-  background: #0f172a;
+  background: #1a1a1a;
   color: white;
   position: relative;
   overflow: hidden;
@@ -16,7 +16,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   opacity: 0.3;
 }
 
@@ -105,14 +104,13 @@
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: rgba(99, 102, 241, 0.1);
-  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgba(99, 102, 241, 0.3);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .profile-image {
@@ -120,6 +118,11 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.hero-avatar:hover {
+  transform: scale(1.1);
 }
 
 @keyframes fadeInUp {

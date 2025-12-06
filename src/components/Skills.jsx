@@ -58,13 +58,6 @@ const Skills = () => {
                     <div className="skill-header">
                       <div className="skill-icon">{skill.icon}</div>
                       <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
                     </div>
                   </div>
                 ))}

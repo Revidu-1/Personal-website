@@ -11,7 +11,7 @@ const Hero = () => {
           <h1 className="hero-title">
             Hi, I'm <span className="highlight">Revidu Liyanage</span>
           </h1>
-          <h2 className="hero-subtitle">Graduate Software Engineer & AI/ML Specialist</h2>
+          <h2 className="hero-subtitle">Graduate Software Engineer - AI & ML Engineer</h2>
           <p className="hero-description">
             Creating production-grade systems and solving real-world problems through technology and innovation is my passion. I bring ideas to life with the help of clean, efficient code.
             
@@ -27,7 +27,7 @@ const Hero = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
-            <a href="mailto:your.email@example.com" aria-label="Email">
+            <a href="mailto:revidu33@gmail.com" aria-label="Email">
               <FaEnvelope />
             </a>
           </div>

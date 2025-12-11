@@ -29,20 +29,6 @@ const About = () => {
               society secretary, organizing events and building community. I'm continuously learning, currently completing an AI Bootcamp 
               focused on ML fundamentals and production deployment, always staying at the forefront of technology.
             </p>
-            <div className="about-stats">
-              <div className="stat-item">
-                <h3>BSc (Hons)</h3>
-                <p>University of Sheffield</p>
-              </div>
-              <div className="stat-item">
-                <h3>2:1</h3>
-                <p>Overall Grade</p>
-              </div>
-              <div className="stat-item">
-                <h3>Distinction</h3>
-                <p>Dissertation Grade</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import emailjs from '@emailjs/browser'
 import './Contact.css'
 
 const Contact = () => {
@@ -8,6 +9,7 @@ const Contact = () => {
     email: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -18,10 +20,48 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I will get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    setIsSubmitting(true)
+
+    // EmailJS configuration
+    const serviceId = 'service_4shhz3d'
+    const contactTemplateId = 'template_sq0a8d3' // Template for email to you (revidu33@gmail.com)
+    const confirmationTemplateId = 'template_lvhimwf' // Confirmation template to sender
+    const publicKey = '9uTaWZqkbIIDWSINM'
+
+    // Send email to you (revidu33@gmail.com) with their message
+    emailjs.send(serviceId, contactTemplateId, {
+      to_email: 'revidu33@gmail.com',
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      reply_to: formData.email
+    }, publicKey)
+      .then(() => {
+        // Send confirmation email back to the sender
+        return emailjs.send(serviceId, confirmationTemplateId, {
+          to_email: formData.email,
+          to_name: formData.name,
+          from_name: 'Revidu Liyanage',
+          from_email: 'revidu33@gmail.com',
+          reply_to: 'revidu33@gmail.com'
+        }, publicKey)
+          .catch((confirmationError) => {
+            // Log confirmation error but don't fail the whole process
+            console.error('Confirmation email error:', confirmationError)
+            console.error('Confirmation error details:', confirmationError.text || confirmationError.message)
+          })
+      })
+      .then(() => {
+        alert('Thank you for your message! I will get back to you soon.')
+        setFormData({ name: '', email: '', message: '' })
+        setIsSubmitting(false)
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error)
+        console.error('Error details:', error.text || error.message)
+        alert(`Sorry, there was an error sending your message: ${error.text || error.message || 'Unknown error'}. Please check the console for details or email me directly at revidu33@gmail.com`)
+        setIsSubmitting(false)
+      })
   }
 
   return (
@@ -40,21 +80,21 @@ const Contact = () => {
                 <FaEnvelope className="contact-icon" />
                 <div>
                   <h4>Email</h4>
-                  <p>your.email@example.com</p>
+                  <p>revidu33@gmail.com</p>
                 </div>
               </div>
               <div className="contact-item">
                 <FaPhone className="contact-icon" />
                 <div>
                   <h4>Phone</h4>
-                  <p>+1 (555) 123-4567</p>
+                  <p>07894176915</p>
                 </div>
               </div>
               <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />
                 <div>
                   <h4>Location</h4>
-                  <p>Your City, Country</p>
+                  <p>Sheffield, UK</p>
                 </div>
               </div>
             </div>
@@ -90,7 +130,9 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn btn-primary">Send Message</button>
+            <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </button>
           </form>
         </div>
       </div>

@@ -29,7 +29,7 @@ const Timeline = () => {
     },
     {
       id: 4,
-      year: '2020 - 2024',
+      year: '2022 - 2025',
       title: 'BSc (Hons) Computer Science',
       company: 'University of Sheffield',
       description: 'Graduated with 2:1 classification. Achieved Distinction in dissertation: Deep-learning pipeline for respiratory sound classification matching state-of-the-art performance.',
